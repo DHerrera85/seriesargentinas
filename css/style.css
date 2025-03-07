@@ -187,7 +187,6 @@ nav .menu li a:hover{
     font-weight: 600;
     display: -webkit-box;
     max-width: 80%;
-    -webkit-line-clamp: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     color: #3a3a3a;
