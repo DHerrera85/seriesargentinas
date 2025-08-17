@@ -369,3 +369,33 @@ nav .menu-btn{
         height: 40px;
     }
 }
+
+/* Ocultar el menú y mostrar botón en pantallas chicas */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+  }
+}
+
+/* En pantallas grandes, ocultar el botón hamburguesa */
+.hamburger {
+  display: none;
+}

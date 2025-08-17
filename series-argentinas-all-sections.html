@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Series Argentinas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lightslider.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+  <link rel="shortcut icon" href="images/fav icon.png">
+  <script src="js/JQuery3.3.1.js"></script>
+  <script src="js/lightslider.js"></script>
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 99;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+      }
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin: 20px;
+    }
+
+    ul.autoWidth {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.autoWidth li {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+
+    .box {
+      width: 280px;
+      text-align: center;
+    }
+
+    .box img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .box .series-title {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .box .platform {
+      font-size: 14px;
+      color: gray;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      background-color: #f3f3f3;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">
+    <img src="images/seriesargentinas-logo2.png" alt="Series Argentinas Logo">
+  </a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <ul class="menu">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Destacados</a></li>
+    <li><a href="https://tirasargentinas.netlify.app/">Tiras Diarias</a></li>
+    <li><a href="#">Series</a></li>
+    <li><a href="#">Ficciones Juveniles</a></li>
+  </ul>
+  <div class="search">
+    <input type="text" placeholder="Encontrá tu Serie Favorita">
+    <i class="fas fa-search"></i>
+  </div>
+</nav>
+
+<!-- Sección Últimas -->
+<h2 class="section-title">Últimas</h2>
+<ul id="autoWidth" class="cs-hidden autoWidth">
+  <li class="item-a">
+    <div class="box">
+      <img src="images/viudasnegras.jpg" alt="Viudas Negras">
+      <p class="series-title">Viudas Negras: P*t@s y chorras</p>
+      <p class="platform">Flow / TNT</p>
+    </div>
+  </li>
+  <li class="item-b">
+    <div class="box">
+      <img src="images/el_eternauta.jpg" alt="El Eternauta">
+      <p class="series-title">El Eternauta</p>
+      <p class="platform">Netflix</p>
+    </div>
+  </li>
+  <li class="item-c">
+    <div class="box">
+      <img src="images/camaleon.jpg" alt="Camaleón">
+      <p class="series-title">Camaleón: el Pasado Nunca Muere</p>
+      <p class="platform">Disney+</p>
+    </div>
+  </li>
+</ul>
+
+<!-- Sección Comedias -->
+<h2 class="section-title">Comedias</h2>
+<ul id="autoWidth2" class="cs-hidden autoWidth">
+  <li>
+    <div class="box">
+      <img src="images/viudasnegras.jpg" alt="Viudas Negras">
+      <p class="series-title">Viudas Negras</p>
+      <p class="platform">Flow / TNT</p>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <img src="images/envidiosa.jpg" alt="Envidiosa">
+      <p class="series-title">Envidiosa</p>
+      <p class="platform">Netflix</p>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <img src="images/encargado.jpg" alt="El Encargado">
+      <p class="series-title">El Encargado</p>
+      <p class="platform">Disney+</p>
+    </div>
+  </li>
+</ul>
+
+<!-- Sección Policiales -->
+<h2 class="section-title">Policiales</h2>
+<ul class="autoWidth">
+  <li>
+    <div class="box">
+      <img src="images/atrapados.jpg" alt="Atrapados">
+      <p class="series-title">Atrapados</p>
+      <p class="platform">Netflix</p>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <img src="images/cromanon.jpg" alt="Cromañón">
+      <p class="series-title">Cromañón</p>
+      <p class="platform">Prime Video</p>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <img src="images/barrabrava.jpg" alt="Barrabrava">
+      <p class="series-title">Barrabrava</p>
+      <p class="platform">Prime Video</p>
+    </div>
+  </li>
+</ul>
+
+<!-- Sección Juveniles -->
+<h2 class="section-title">Juveniles</h2>
+<ul class="autoWidth">
+  <li>
+    <div class="box">
+      <img src="images/margarita.jpg" alt="Margarita">
+      <p class="series-title">Margarita</p>
+      <p class="platform">El Trece</p>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <img src="images/selenaok.jpg" alt="Selena OK">
+      <p class="series-title">Selena OK</p>
+      <p class="platform">TV Pública</p>
+    </div>
+  </li>
+  <li>
+    <div class="box">
+      <img src="images/stm.jpg" alt="STM">
+      <p class="series-title">STM</p>
+      <p class="platform">Canal 9</p>
+    </div>
+  </li>
+</ul>
+
+<footer>
+  <p>Series Argentinas 2025</p>
+  <p>By <a href="https://github.com/DHerrera85">DHerrera85</a></p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+  }
+
+  $(document).ready(function() {
+    $('#autoWidth,#autoWidth2').lightSlider({
+      autoWidth: true,
+      loop: true,
+      onSliderLoad: function() {
+        $('#autoWidth,#autoWidth2').removeClass('cS-hidden');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
